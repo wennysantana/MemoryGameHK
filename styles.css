@@ -1,0 +1,105 @@
+body {
+    font-family: 'Comic Sans MS', 'Arial', sans-serif;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #ffccff, #ff99cc); 
+}
+
+#menu {
+    text-align: center;
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    width: 300px;
+}
+
+#menu h1 {
+    font-size: 2.5em;
+    color: #ff66b2;
+    margin-bottom: 20px;
+    font-family: 'Comic Sans MS', 'Arial', sans-serif;
+}
+
+#menu button {
+    padding: 15px 30px;
+    font-size: 1.2em;
+    color: #fff;
+    background-color: #ff66b2;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#menu button:hover {
+    background-color: #e05599;
+}
+
+#lives {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.heart {
+    width: 40px;
+    height: 40px;
+    margin: 0 5px;
+}
+
+#game-board {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    max-width: 600px;
+    margin: 50px auto;
+}
+
+.card {
+    width: 100px;
+    height: 140px; /* Aumentado de 100px para 140px */
+    perspective: 1000px;
+}
+
+.card-inner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+}
+
+.card.flipped .card-inner {
+    transform: rotateY(180deg);
+}
+
+.card-front, .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.card-front {
+    background-color: #ed5aa3;
+}
+
+.card-back {
+    background-color: #fff;
+    transform: rotateY(180deg);
+}
+
+.card-back img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo da Memória</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="menu">
+        <h1>Jogo da Memória</h1>
+        <button id="startButton">Começar Jogo</button>
+    </div>
+
+    <div id="game" style="display:none;">
+        <div id="lives">
+            <img src="assets/imgs/heart.gif" alt="Heart" class="heart">
+            <img src="assets/imgs/heart.gif" alt="Heart" class="heart">
+            <img src="assets/imgs/heart.gif" alt="Heart" class="heart">
+        </div>
+        <div id="game-board"></div>
+    </div>
+
+    <audio id="menuMusic" src="assets/songs/menu-music.mp3" loop></audio>
+    <audio id="gameMusic" src="assets/songs/game-music.mp3" loop></audio>
+    <audio id="correctSound" src="assets/sounds/correct.mp3"></audio>
+    <audio id="wrongSound" src="assets/sounds/wrong.mp3"></audio>
+    <audio id="gameOverSound" src="assets/sounds/wrong.mp3"></audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
